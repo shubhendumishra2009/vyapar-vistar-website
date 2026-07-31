@@ -22,7 +22,8 @@ import {
   Settings,
   ChevronDown,
   Plus,
-  Lock
+  Lock,
+  Download
 } from 'lucide-react';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -201,6 +202,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <p className="text-sm font-semibold text-white">{user?.name || 'User'}</p>
                 <p className="text-xs text-slate-500">{user?.type || 'Administrator'}</p>
               </div>
+            </div>
+            <div className="px-2">
+              <p className="text-xs font-medium text-slate-400 mb-2">Download our desktop app for more flexibility</p>
+              <a
+                href="https://github.com/shubhendumishra2009/vyapar-vistar-backend/releases/latest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full px-4 py-2.5 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl transition-all duration-200 shadow-lg shadow-emerald-500/20"
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Desktop App
+              </a>
             </div>
             <button
               onClick={handleLogout}
